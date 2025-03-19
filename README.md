@@ -3,26 +3,30 @@ Personal repository for exercises of Probability and Statistics.
 
 ## FIRST ASSIGN
 
-### Original assign text
-Sia $(xi, yi)i∈{1,...,n}$ un campione bi-variato di numerosità $n$.\
-Poniamo 
+### Original assign text (translated in English)
+Let $(xi, yi)i∈{1,...,n}$ be a bivariate sample of size $n$.\
+Let
 $$
-\begin{aligned} 
 \phi(a, b) = \sum_{i=1}^n (y_i - (a \cdot x_i + b))^2
-\end{aligned}
 $$
-Si scriva un programma che, dato $(xi, yi)i∈{1,...,n}$, calcoli un punto di minimo
-di $ϕ$, cioè un punto $(a∗, b∗) ∈ R2$ tale che
-$ϕ(a∗, b∗) = min{ϕ(a, b) : a, b ∈ R}.$\
-Si considerino poi i due campioni bi-variati (Tmin, Tmed) e (Tmin, Ptot) del file Meteo_Chioggia60.ods e si crei, per ciascuno dei due campioni bi-variati, il corrispondente diagramma di dispersione col grafico della retta $t → a∗t + b∗$
-determinata dal punto di minimo (a∗, b∗) calcolato col programma.\
-Si determini inoltre l'autodecomposizione della matrice di covarianza del campione quattro-variato (Tmin, Tmed, Tmax, Ptot) e si identifichino le due direzioni più importanti (autovalori maggiori). Si crei il corrispondente diagramma di dispersione delle prime due componenti del campione quattro-variato nel nuovo sistema di coordinate (trasformazione lineare dei dati secondo la trasposta della matrice di autovettori ortogonali). \
-Per la consegna servono:
-- una giustificazione matematica della procedura utilizzata per il calcolo di un punto di minimo di $ϕ$;
-- lo pseudo-codice del programma e il codice commentato in un linguaggio
-standard come C++ o Python;
-- i grafici dei due diagrammi di dispersione con le rette di regressione in formato pdf e i valori numerici dei punti di minimo utilizzati;
-- il grafico del diagramma di dispersione delle due componenti più importanti dei dati trasformati con la matrice trasposta di autovettori.
+Write a program that, given $(xi, yi)i∈{1,...,n}$, computes a minimum point
+of $ϕ$, that is, a point $(a∗, b∗) ∈ R2$ such that
+$$
+ϕ(a∗, b∗) = min{ϕ(a, b) : a, b ∈ R}
+$$
+Then consider the two bivariate samples *(Tmin, Tmed)* and *(Tmin, Ptot)* of the *Meteo_Chioggia60.ods* file and create, for each of the two bivariate samples,
+the corresponding scatter diagram with the graph of the line $t → a∗t + b∗$
+determined by the minimum point $(a∗, b∗)$ calculated with the program.\
+Furthermore, determine the eigendecomposition of the covariance matrix of the four-variate sample *(Tmin, Tmed, Tmax, Ptot)* and identify the two
+most important directions (largest eigenvalues). Create the corresponding scatter diagram of the first two components of the four-variate sample
+in the new coordinate system (linear transformation of the data according to the
+transpose of the orthogonal eigenvector matrix).\
+The following are required for the delivery:
+- a mathematical justification of the procedure used to calculate a minimum point of $ϕ$;
+- the pseudo-code of the program and the commented code in a standard language such as C++ or Python;
+- the graphs of the two scatter diagrams with the regression lines in pdf format and the numerical values ​​of the minimum points used;
+- the graph of the scatter diagram of the two most important components of the data transformed with the transposed matrix of eigenvectors.
+
 
 ### Problem resolution 
 I applied the Gradient Descend method to elaborate the set of data and find the minimum values for $a$ and $b$. In particular this method uses the gradient of the function as subtracting value for the researce of the minimum. \
