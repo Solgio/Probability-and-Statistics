@@ -36,7 +36,8 @@ a_{\text{new}} = a_{\text{old}} - \alpha \cdot \frac{\partial \phi}{\partial a}
 \[
 b_{\text{new}} = b_{\text{old}} - \alpha \cdot \frac{\partial \phi}{\partial b}
 \]
-dove \(\alpha\) è il \textbf{learning rate}, un parametro che controlla la dimensione dei passi dell'aggiornamento.
+dove \(\alpha\) è il \textbf{learning rate}, un parametro che controlla la dimensione dei passi dell'aggiornamento. Questo parametro  è fondamentale per garantire che il metodo converga. Se infatti assumesse un valore troppo grande il rischio è che il passo risulti troppo grande portando alla divergenza del metodo. Questo perchè la funzione in questione è convessa e quindi un passo troppo ampio porterebbe a risalire la parabola invece che portare alla "naturale" convergenza per valori $0<\alpha<1/maxAutovalore$.\\
+E' anche necessario che il passo $\alpha$ non sia però troppo piccolo perchè in tal caso il metodo potrebbe convergere troppo lentamente.
 
 \section{Pseudocodice}
 Lo pseudocodice per il Gradient Descent è il seguente:
@@ -75,10 +76,10 @@ I risultati ottenuti applicando il Gradient Descent ai campioni \((Tmin, Tmed)\)
 
 I valori ottimali dei coefficienti sono:
 \[
-\text{Punto di minimo per } (Tmin, Tmed): a^* = \texttt{a1}, b^* = \texttt{b1}
+\text{Punto di minimo per } (Tmin, Tmed): a^* = \texttt{0,8043}, b^* = \texttt{7,125}
 \]
 \[
-\text{Punto di minimo per } (Tmin, Ptot): a^* = \texttt{a2}, b^* = \texttt{b2}
+\text{Punto di minimo per } (Tmin, Ptot): a^* = \texttt{-0,6349}, b^* = \texttt{16,0708}
 \]
 
 \section{Conclusioni}

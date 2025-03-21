@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Caricamento dei dati
-data = pd.read_excel("Meteo_Chioggia60.ods", sheet_name="Dati")
+data = pd.read_excel("/home/solgio/Desktop/Uni/Probability-and-Statistics/First assign/Meteo_Chioggia60.ods", sheet_name="Dati")
 
 # Seleziona le colonne Tmin, Tmed, Tmax, Ptot
 # Supponiamo che le colonne siano nelle posizioni 1, 2, 3, 4 (indici 0-based)
