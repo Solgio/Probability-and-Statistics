@@ -29,10 +29,14 @@ sorted_indices = np.argsort(eigenvalues)[::-1]
 eigenvalues = eigenvalues[sorted_indices]
 eigenvectors = eigenvectors[:, sorted_indices]
 
+lambda_matrix = np.diag(eigenvalues)
+
 # Stampa autovalori e autovettori
 print("Autovalori:", eigenvalues)
 print("Autovettori:")
 print(eigenvectors)
+print("Matrice Covarianza:")
+print(cov_matrix)
 
 # Seleziona le prime due componenti principali
 Q = eigenvectors[:, :2]  # Prime due colonne (direzioni principali)
@@ -47,3 +51,16 @@ plt.grid(True)
 plt.savefig('matrice_covarianza.pdf', format='pdf' , bbox_inches='tight')
 plt.show()
 
+with open('risultati_matrici.txt', 'w') as f:
+    f.write("=== RISULTATI ANALISI ===\n\n")
+    
+    # Matrice diagonale di autovalori
+    f.write("MATRICE DIAGONALE DI AUTOVALORI (Λ):\n")
+    np.savetxt(f, lambda_matrix, fmt='%10.4f', delimiter='\t')
+    f.write("\nAutovalori:\n")
+    np.savetxt(f, eigenvalues.reshape(1, -1), fmt='%10.4f', delimiter='\t')
+    
+    # Matrice di autovettori
+    f.write("\n\nMATRICE ORTONORMALE DI AUTOVETTORI (Q):\n")
+    np.savetxt(f, eigenvectors, fmt='%10.4f', delimiter='\t')
+   
