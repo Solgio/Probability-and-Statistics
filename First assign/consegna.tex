@@ -7,7 +7,7 @@
 \usepackage{float}
 
 \title{Esercizio 15* del Foglio 1}
-\author{Lorenzo Soligo 2101057, Tommaso Ceron 2101045, Dennis Parolin 2113203, Giuliano Banchieri 2101081}
+\author{Lorenzo Soligo 2101057, Tommaso Ceron 2101045,\\ Dennis Parolin 2113203, Giuliano Banchieri 2101081}
 \date{Marzo 2025}
 
 \begin{document}
@@ -85,6 +85,22 @@ I valori ottimali dei coefficienti sono:
 \section{Conclusioni}
 Il Gradient Descent è un metodo efficace per trovare il minimo della funzione di errore quadratico medio nella regressione lineare. La scelta del learning rate \(\alpha\) e del numero di iterazioni \(T\) è cruciale per garantire una convergenza rapida e stabile.
 
+\section{Covarianza}
+Vengono qui riportate le due matrici ricavate dall'analisi dei dati:\\
 
+MATRICE DIAGONALE DI AUTOVALORI (\lambda):
+\begin{bmatrix}
+    72.4721	  &  0.0000	  &  0.0000	  &  0.0000\\
+    0.0000	 &  30.3224	  &  0.0000	  &  0.0000\\
+    0.0000	 &   0.0000	  &  1.7106	  &  0.0000\\
+    0.0000	 &   0.0000	  &  0.0000	  &  0.1237
+\end{bmatrix}\\ \\
 
+MATRICE ORTONORMALE DI AUTOVETTORI:
+\begin{bmatrix}
+    0.2544	 &   0.5123	 &  -0.7127	 &  -0.4060\\
+    0.2453	 &   0.5217	 &  -0.0029	 &   0.8171\\
+    0.2463	 &   0.5291	 &   0.7013	 &  -0.4093\\
+   -0.9025	 &   0.4306	 &  -0.0103	 &  -0.0041
+\end{bmatrix}
 \end{document}
